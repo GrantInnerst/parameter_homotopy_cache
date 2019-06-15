@@ -1,0 +1,29 @@
+CONFIG
+PARAMETERHOMOTOPY: 2;
+END;
+
+INPUT
+
+variable_group p1, p2, p3;
+variable_group p4, p5, p6;
+variable_group p7, p8, p9;
+variable_group l1, l2, l3, l4, l5;
+function f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14;
+parameter r1, r2, r3, r4, r5, r6, r7, r8, r9;
+
+f1 = -1 * r1^2  +  p1^2 * p9 * l1  +  p1^2 * l5;
+f2 = -1 * r2^2  +  p2^2 * p9 * l2  +  p2^2 * l5;
+f3 = -1 * r3^2  -  p3^2 * p7 * l1  -  p3^2 * p8 * l2  +  p3^2 * l5;
+f4 = -1 * r4^2  +  p4^2 * p9 * l3  +  p4^2 * l5;
+f5 = -1 * r5^2  +  p5^2 * p9 * l4  +  p5^2 * l5;
+f6 = -1 * r6^2  -  p6^2 * p7 * l3  -  p6^2 * p8 * l4  +  p6^2 * l5;
+f7 = -1 * r7^2  -  p7^2 * p3 * l1  -  p7^2 * p6 * l3  +  p7^2 * l5;
+f8 = -1 * r8^2  -  p8^2 * p3 * l2  -  p8^2 * p6 * l4  +  p8^2 * l5;
+f9 = -1 * r9^2  +  p9^2 * p1 * l1  +  p9^2 * p2 * l2  +  p9^2 * p4 * l3  +  p9^2 * p5 * l4  +  p9^2 * l5;
+f10 = p1 * p9  -  p3 * p7;
+f11 = p2 * p9  -  p3 * p8;
+f12 = p4 * p9  -  p6 * p7;
+f13 = p5 * p9  -  p6 * p8;
+f14 = p1  +  p2  +  p3  +  p4  +  p5  +  p6  +  p7  +  p8  +  p9  -  1;
+
+END;

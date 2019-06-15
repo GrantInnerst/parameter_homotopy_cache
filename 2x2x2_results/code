@@ -1,0 +1,26 @@
+CONFIG
+parameterhomotopy: 2;
+END;
+
+
+INPUT
+
+variable_group p111,p121,p211,p221;
+variable_group p112,p122,p212,p222;
+variable_group l1,l2,l3;
+parameter r1,r2,r3,r4,r5,r6,r7,r8;
+function f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11;
+
+f1 = -r1^2 + p221*l1*p111^2  +  l3*p111^2;
+f2 = -r2^2 + -1*l1*p211*p121^2  +  l3*p121^2;
+f3 = -r3^2 + -1*l1*p121*p211^2  +  l3*p211^2;
+f4 = -r4^2 + l1*p111*p221^2  +  l3*p221^2;
+f5 = -r5^2 + l3*p112^2  +  p222*l2*p112^2;
+f6 = -r6^2 + l3*p122^2  -  l2*p212*p122^2;
+f7 = -r7^2 + l3*p212^2  -  l2*p122*p212^2;
+f8 = -r8^2 + l3*p222^2  +  l2*p112*p222^2;
+f9 = p221*p111  -  p211*p121;
+f10 = p222*p112  -  p212*p122;
+f11 = p221  +  p211  +  p121  +  p111  +  p222  +  p212  +  p122  +  p112  -  1;
+
+END;

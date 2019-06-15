@@ -1,0 +1,36 @@
+CONFIG
+PARAMETERHOMOTOPY: 1;
+USEREGENERATION: 1;
+END;
+
+INPUT
+
+variable_group p1, p2, p3, p4;
+variable_group p5, p6, p7, p8;
+variable_group p9, p10, p11, p12;
+variable_group l1, l2, l3, l4, l5, l6, l7;
+function f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18, f19;
+parameter r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12;
+
+f1 = p1 * p12  -  p4 * p9;
+f2 = p2 * p12  -  p4 * p10;
+f3 = p3 * p12  -  p4 * p11;
+f4 = p5 * p12  -  p8 * p9;
+f5 = p6 * p12  -  p8 * p10;
+f6 = p7 * p12  -  p8 * p11;
+f7 = p1  +  p2  +  p3  +  p4  +  p5  +  p6  +  p7  +  p8  +  p9  +  p10  +  p11  +  p12  -  1;
+f8 = -1 * r1^2  +  p1^2 * p12 * l1  +  p1^2 * l7;
+f9 = -1 * r2^2  +  p2^2 * p12 * l2  +  p2^2 * l7;
+f10 = -1 * r3^2  +  p3^2 * p12 * l3  +  p3^2 * l7;
+f11 = -1 * r4^2  -  p4^2 * p9 * l1  -  p4^2 * p10 * l2  -  p4^2 * p11 * l3  +  p4^2 * l7;
+f12 = -1 * r5^2  +  p5^2 * p12 * l4  +  p5^2 * l7;
+f13 = -1 * r6^2  +  p6^2 * p12 * l5  +  p6^2 * l7;
+f14 = -1 * r7^2  +  p7^2 * p12 * l6  +  p7^2 * l7;
+f15 = -1 * r8^2  -  p8^2 * p9 * l4  -  p8^2 * p10 * l5  -  p8^2 * p11 * l6  +  p8^2 * l7;
+f16 = -1 * r9^2  -  p9^2 * p4 * l1  -  p9^2 * p8 * l4  +  p9^2 * l7;
+f17 = -1 * r10^2  -  p10^2 * p4 * l2  -  p10^2 * p8 * l5  +  p10^2 * l7;
+f18 = -1 * r11^2  -  p11^2 * p4 * l3  -  p11^2 * p8 * l6  +  p11^2 * l7;
+f19 = -1 * r12^2  +  p12^2 * p1 * l1  +  p12^2 * p2 * l2  +  p12^2 * p3 * l3  +  p12^2 * p5 * l4  +  p12^2 * p6 * l5  +  p12^2 * p7 * l6  +  p12^2 * l7;
+
+
+END;
